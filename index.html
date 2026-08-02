@@ -14,6 +14,23 @@
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     line-height: 1.7;
+    position: relative;
+  }
+
+  .sunrise-glow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: radial-gradient(ellipse 60% 100% at 50% 100%, rgba(201, 168, 76, 0.22) 0%, rgba(201, 168, 76, 0.1) 35%, rgba(201, 168, 76, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav, .hero, .homework, .posts-label, .posts, footer {
+    position: relative;
+    z-index: 1;
   }
 
   nav {
@@ -219,6 +236,8 @@
 </head>
 <body>
 
+<div class="sunrise-glow"></div>
+
 <nav>
   <div class="wordmark">North America Strong</div>
   <ul class="nav-links">
@@ -231,7 +250,7 @@
 <div class="hero">
   <div class="eyebrow">Fortress North America</div>
   <h1>Three countries.<br>One unfinished job.</h1>
-  <p class="subhead">The most resource-rich, demographically sound, geographically protected bloc on earth — bottlenecked entirely by homework none of the three have done. This is the argument for getting on with it.</p>
+  <p class="subhead">The most resource-rich, demographically sound, geographically protected bloc on earth — bottlenecked entirely by internal road blocks none of the three have taken initiative on. This is the argument for getting on with it.</p>
   <a class="cta" href="#">Read the manifesto</a>
 </div>
 
@@ -249,7 +268,7 @@
   <div class="hw-panel">
     <div class="hw-country">United States</div>
     <div class="gold-rule"></div>
-    <p class="hw-text">The largest economy in the bloc, and <strong>the least reliable partner in it.</strong> National security exceptions used as trade weapons. A reshoring push that ignores the driveable continent next door. Allies weakened and called it leverage.</p>
+    <p class="hw-text">The largest economy in the bloc, and <strong>the least reliable partner in it.</strong> National security exceptions used as trade weapons. A reshoring push that ignores Canada and Mexico. Allies weakened and called it leverage.</p>
   </div>
 </div>
 
