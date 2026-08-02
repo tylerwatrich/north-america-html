@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North America Strong</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0D0D0D;
+    color: #E8E2D6;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 0.5px solid #2A2A2A;
+  }
+
+  .wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C9A84C;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #7A7469;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover { color: #E8E2D6; }
+
+  .hero {
+    padding: 6rem 2.5rem 5rem;
+    max-width: 780px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.12;
+    color: #F0EBE0;
+    margin: 0 0 2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .subhead {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #9A9189;
+    max-width: 560px;
+    margin: 0 0 2.5rem;
+  }
+
+  .cta {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #C9A84C;
+    color: #C9A84C;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .cta:hover { background: #C9A84C; color: #0D0D0D; }
+
+  .homework {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 0.5px solid #1E1E1E;
+    border-bottom: 0.5px solid #1E1E1E;
+    margin: 4rem 0;
+  }
+
+  .hw-panel {
+    padding: 2.5rem;
+    border-right: 0.5px solid #1E1E1E;
+  }
+
+  .hw-panel:last-child { border-right: none; }
+
+  .hw-country {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    margin-bottom: 1rem;
+  }
+
+  .gold-rule {
+    width: 32px;
+    height: 1px;
+    background: #C9A84C;
+    margin-bottom: 1.5rem;
+  }
+
+  .hw-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #7A7469;
+  }
+
+  .hw-text strong {
+    color: #C4BDAF;
+    font-weight: 500;
+  }
+
+  .posts-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #3D3830;
+    padding: 0 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .posts {
+    padding: 0 2.5rem 4rem;
+  }
+
+  .post-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    border-bottom: 0.5px solid #1A1A1A;
+    gap: 2rem;
+  }
+
+  .post-series {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #3D3830;
+    min-width: 120px;
+  }
+
+  .post-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #C4BDAF;
+    flex: 1;
+    cursor: pointer;
+  }
+
+  .post-title:hover { color: #F0EBE0; }
+
+  .post-date {
+    font-size: 12px;
+    color: #3D3830;
+    min-width: 80px;
+    text-align: right;
+  }
+
+  footer {
+    border-top: 0.5px solid #1A1A1A;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: #3D3830;
+    max-width: 400px;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    color: #3D3830;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+  }
+
+  .footer-links a:hover { color: #C9A84C; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wordmark">North America Strong</div>
+  <ul class="nav-links">
+    <li><a href="#">Manifesto</a></li>
+    <li><a href="#">The Series</a></li>
+    <li><a href="#">LinkedIn</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">Fortress North America</div>
+  <h1>Three countries.<br>One unfinished job.</h1>
+  <p class="subhead">The most resource-rich, demographically sound, geographically protected bloc on earth — bottlenecked entirely by homework none of the three have done. This is the argument for getting on with it.</p>
+  <a class="cta" href="#">Read the manifesto</a>
+</div>
+
+<div class="homework">
+  <div class="hw-panel">
+    <div class="hw-country">Canada</div>
+    <div class="gold-rule"></div>
+    <p class="hw-text">Ten provinces that can't freely trade with each other. <strong>Energy that can't reach tidewater.</strong> Companies sold south before they scale. The raw materials for a tier-one economy, managed like a franchise.</p>
+  </div>
+  <div class="hw-panel">
+    <div class="hw-country">Mexico</div>
+    <div class="gold-rule"></div>
+    <p class="hw-text">The fastest nearshoring story in the world, running on <strong>an electricity grid that can't keep up.</strong> Assembly without IP. Manufacturing depth without supplier density. A continental factory that hasn't been paid what a factory earns.</p>
+  </div>
+  <div class="hw-panel">
+    <div class="hw-country">United States</div>
+    <div class="gold-rule"></div>
+    <p class="hw-text">The largest economy in the bloc, and <strong>the least reliable partner in it.</strong> National security exceptions used as trade weapons. A reshoring push that ignores the driveable continent next door. Allies weakened and called it leverage.</p>
+  </div>
+</div>
+
+<div class="posts-label">Recent pieces</div>
+
+<div class="posts">
+  <div class="post-item">
+    <span class="post-series">The Hook</span>
+    <span class="post-title">Ford's walls are too small</span>
+    <span class="post-date">Jul 27</span>
+  </div>
+  <div class="post-item">
+    <span class="post-series">News</span>
+    <span class="post-title">Who's funding Alberta's exit?</span>
+    <span class="post-date">Jul 24</span>
+  </div>
+  <div class="post-item">
+    <span class="post-series">Manifesto</span>
+    <span class="post-title">What Fortress North America actually means</span>
+    <span class="post-date">Jul 20</span>
+  </div>
+  <div class="post-item">
+    <span class="post-series">Canada's Homework</span>
+    <span class="post-title">The interprovincial wall nobody talks about</span>
+    <span class="post-date">Jul 15</span>
+  </div>
+  <div class="post-item">
+    <span class="post-series">Mexico's Homework</span>
+    <span class="post-title">The grid problem that could stall nearshoring</span>
+    <span class="post-date">Jul 10</span>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">A continental sovereignty movement. Three self-reliant nations that choose alliance from strength — not dependency dressed up as partnership.</p>
+  <div class="footer-links">
+    <a href="#">northamericastrong.co</a>
+    <a href="#">linkedin.com/company/north-america-strong</a>
+  </div>
+</footer>
+
+</body>
+</html>
