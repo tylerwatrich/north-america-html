@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>North America Strong</title>
+<title>All Posts — North America Strong</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +28,7 @@
     z-index: 0;
   }
 
-  nav, .hero, .homework, .posts-label, .posts, footer {
+  nav, .page-header, .posts-label, .posts, footer {
     position: relative;
     z-index: 1;
   }
@@ -48,6 +48,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #C9A84C;
+    text-decoration: none;
   }
 
   .nav-links {
@@ -65,9 +66,10 @@
   }
 
   .nav-links a:hover { color: #E8E2D6; }
+  .nav-links a.active { color: #C9A84C; }
 
-  .hero {
-    padding: 6rem 2.5rem 5rem;
+  .page-header {
+    padding: 5rem 2.5rem 3rem;
     max-width: 780px;
   }
 
@@ -81,11 +83,11 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
     line-height: 1.12;
     color: #F0EBE0;
-    margin: 0 0 2rem;
+    margin: 0 0 1.25rem;
     letter-spacing: -0.01em;
   }
 
@@ -94,72 +96,13 @@
     line-height: 1.75;
     color: #9A9189;
     max-width: 560px;
-    margin: 0 0 2.5rem;
-  }
-
-  .cta {
-    display: inline-block;
-    background: transparent;
-    border: 1px solid #C9A84C;
-    color: #C9A84C;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 0.85rem 2rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-  }
-
-  .cta:hover { background: #C9A84C; color: #0D0D0D; }
-
-  .homework {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: 0.5px solid #1E1E1E;
-    border-bottom: 0.5px solid #1E1E1E;
-    margin: 4rem 0;
-  }
-
-  .hw-panel {
-    padding: 2.5rem;
-    border-right: 0.5px solid #1E1E1E;
-  }
-
-  .hw-panel:last-child { border-right: none; }
-
-  .hw-country {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #C9A84C;
-    margin-bottom: 1rem;
-  }
-
-  .gold-rule {
-    width: 32px;
-    height: 1px;
-    background: #C9A84C;
-    margin-bottom: 1.5rem;
-  }
-
-  .hw-text {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #7A7469;
-  }
-
-  .hw-text strong {
-    color: #C4BDAF;
-    font-weight: 500;
   }
 
   .posts-label {
     font-size: 10px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #e1e1e1;
+    color: #3D3830;
     padding: 0 2.5rem;
     margin-bottom: 2rem;
   }
@@ -181,8 +124,8 @@
     font-size: 10px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #e1e1e1;
-    min-width: 120px;
+    color: #3D3830;
+    min-width: 150px;
   }
 
   .post-title {
@@ -197,7 +140,7 @@
 
   .post-date {
     font-size: 12px;
-    color: #e1e1e1;
+    color: #3D3830;
     min-width: 80px;
     text-align: right;
   }
@@ -212,7 +155,7 @@
 
   .footer-copy {
     font-size: 12px;
-    color: #e1e1e1;
+    color: #3D3830;
     max-width: 400px;
     line-height: 1.6;
   }
@@ -226,7 +169,7 @@
 
   .footer-links a {
     font-size: 11px;
-    color: #e1e1e1;
+    color: #3D3830;
     text-decoration: none;
     letter-spacing: 0.06em;
   }
@@ -239,40 +182,21 @@
 <div class="sunrise-glow"></div>
 
 <nav>
-  <div class="wordmark">North America Strong</div>
+  <a class="wordmark" href="index.html">North America Strong</a>
   <ul class="nav-links">
     <li><a href="#">Manifesto</a></li>
-    <li><a href="posts.html">The Series</a></li>
-    <li><a href="https://www.linkedin.com/company/north-america-strong/">LinkedIn</a></li>
+    <li><a href="posts.html" class="active">The Series</a></li>
+    <li><a href="#">LinkedIn</a></li>
   </ul>
 </nav>
 
-<div class="hero">
-  <div class="eyebrow">Fortress North America</div>
-  <h1>Three countries.<br>One unfinished job.</h1>
-  <p class="subhead">The most resource-rich, demographically sound, geographically protected bloc on earth — bottlenecked entirely by internal road blocks none of the three have taken initiative on. This is the argument for getting on with it.</p>
-  <a class="cta" href="#">Read the manifesto</a>
+<div class="page-header">
+  <div class="eyebrow">The Series</div>
+  <h1>Every piece, in order.</h1>
+  <p class="subhead">The full record — manifesto, news, and the country-by-country homework — newest first.</p>
 </div>
 
-<div class="homework">
-  <div class="hw-panel">
-    <div class="hw-country">Canada</div>
-    <div class="gold-rule"></div>
-    <p class="hw-text">Ten provinces that can't freely trade with each other. <strong>Energy that can't reach tidewater.</strong> Companies sold south before they scale. The raw materials for a tier-one economy, managed like a franchise.</p>
-  </div>
-  <div class="hw-panel">
-    <div class="hw-country">Mexico</div>
-    <div class="gold-rule"></div>
-    <p class="hw-text">The fastest nearshoring story in the world, running on <strong>an electricity grid that can't keep up.</strong> Assembly without IP. Manufacturing depth without supplier density. A continental factory that hasn't been paid what a factory earns.</p>
-  </div>
-  <div class="hw-panel">
-    <div class="hw-country">United States</div>
-    <div class="gold-rule"></div>
-    <p class="hw-text">The largest economy in the bloc, and <strong>the least reliable partner in it.</strong> National security exceptions used as trade weapons. A reshoring push that ignores Canada and Mexico. Allies weakened and called it leverage.</p>
-  </div>
-</div>
-
-<div class="posts-label">Recent pieces</div>
+<div class="posts-label">All pieces</div>
 
 <div class="posts">
   <div class="post-item">
