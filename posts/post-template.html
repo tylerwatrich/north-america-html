@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ford's walls are too small — North America Strong</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0D0D0D;
+    color: #E8E2D6;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .sunrise-glow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: radial-gradient(ellipse 60% 100% at 50% 100%, rgba(201, 168, 76, 0.22) 0%, rgba(201, 168, 76, 0.1) 35%, rgba(201, 168, 76, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav, .post-header, .post-body, footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 0.5px solid #2A2A2A;
+  }
+
+  .wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #7A7469;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover { color: #E8E2D6; }
+  .nav-links a.active { color: #C9A84C; }
+
+  .post-header {
+    padding: 5rem 2.5rem 3rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A7469;
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+  }
+
+  .back-link:hover { color: #C9A84C; }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-series {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #C9A84C;
+  }
+
+  .meta-divider {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #3D3830;
+  }
+
+  .post-date {
+    font-size: 12px;
+    color: #7A7469;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #F0EBE0;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .subhead {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #9A9189;
+  }
+
+  .post-body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2.5rem 5rem;
+  }
+
+  .post-body p {
+    color: #C4BDAF;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-body p:first-of-type::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #C9A84C;
+    float: left;
+    line-height: 0.85;
+    margin: 0.1rem 0.6rem 0 0;
+  }
+
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #F0EBE0;
+    margin: 3rem 0 1.25rem;
+    letter-spacing: -0.005em;
+  }
+
+  .post-body strong {
+    color: #F0EBE0;
+    font-weight: 500;
+  }
+
+  .post-body a {
+    color: #C9A84C;
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(201, 168, 76, 0.4);
+  }
+
+  .post-body a:hover { border-bottom-color: #C9A84C; }
+
+  blockquote {
+    border-left: 2px solid #C9A84C;
+    padding: 0.25rem 0 0.25rem 1.75rem;
+    margin: 2.5rem 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #E8E2D6;
+  }
+
+  .post-body ul {
+    margin: 0 0 1.5rem 1.25rem;
+    color: #C4BDAF;
+  }
+
+  .post-body li {
+    margin-bottom: 0.6rem;
+    padding-left: 0.5rem;
+  }
+
+  .post-footer {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem 2.5rem 0;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 0.6rem;
+    padding-top: 2.5rem;
+    border-top: 0.5px solid #1A1A1A;
+  }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A7469;
+    border: 0.5px solid #2A2A2A;
+    padding: 0.4rem 0.75rem;
+  }
+
+  footer {
+    border-top: 0.5px solid #1A1A1A;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: #3D3830;
+    max-width: 400px;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    color: #3D3830;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+  }
+
+  .footer-links a:hover { color: #C9A84C; }
+</style>
+</head>
+<body>
+
+<div class="sunrise-glow"></div>
+
+<nav>
+  <a class="wordmark" href="../index.html">North America Strong</a>
+  <ul class="nav-links">
+    <li><a href="#">Manifesto</a></li>
+    <li><a href="../posts.html" class="active">The Series</a></li>
+    <li><a href="https://www.linkedin.com/company/north-america-strong/">LinkedIn</a></li>
+  </ul>
+</nav>
+
+<div class="post-header">
+  <a class="back-link" href="../posts.html">← All pieces</a>
+  <div class="post-meta">
+    <span class="post-series">The Hook</span>
+    <span class="meta-divider"></span>
+    <span class="post-date">Jul 27</span>
+  </div>
+  <h1>Ford's walls are too small</h1>
+  <p class="subhead">A premier who understands the stakes better than most is still thinking one province at a time.</p>
+</div>
+
+<div class="post-body">
+  <p>Doug Ford has spent the better part of a year sounding the alarm about Canada's exposure — tariffs, trade dependency, an economy leaning on a single customer. He's not wrong. He's just aiming the fix at the wrong scale.</p>
+
+  <p>Ontario's response to a continental problem has been a provincial one: buy local, retaliate locally, protect what's inside the border. It plays well. It also misses the actual opportunity, which was never about defending Ontario from the United States — it was about building something with Mexico and the U.S. that none of the three could build alone.</p>
+
+  <h2>The wall in the wrong place</h2>
+
+  <p>Every producer in this country already knows the real barrier isn't at the 49th parallel. It's between provinces. Trucking rules, professional licensing, alcohol distribution, procurement — a company can sell into Michigan easier than it can sell into Manitoba. That's the wall worth tearing down first, and it's one Ontario could lead on unilaterally tomorrow.</p>
+
+  <blockquote>The instinct to protect is understandable. The instinct to protect at the provincial border instead of the continental one is a hundred-billion-dollar mistake.</blockquote>
+
+  <p>None of this means the trade fight with Washington isn't real — it is, and Ford has been right to name it plainly when others hedged. But <strong>a fortress needs a perimeter, not just a room.</strong> Ontario building higher internal walls while Alberta, Quebec, and the Maritimes do the same is not strength. It's three ways of losing slower.</p>
+
+  <h2>What the walls should actually be for</h2>
+
+  <ul>
+    <li>Free interprovincial trade, treated as a national security question, not a jurisdictional one.</li>
+    <li>Energy corridors that reach tidewater without a decade of court challenges.</li>
+    <li>A shared posture with Mexico that stops treating nearshoring as a U.S.-only story.</li>
+  </ul>
+
+  <p>Ford has the instincts. He's also got the biggest microphone of any premier willing to use it on this subject. The question isn't whether he understands the threat — he does. It's whether the walls he's building are big enough to matter.</p>
+</div>
+
+<div class="post-footer">
+  <div class="post-tags">
+    <span class="tag">Canada</span>
+    <span class="tag">Trade</span>
+    <span class="tag">The Hook</span>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">A continental sovereignty movement. Three self-reliant nations that choose alliance from strength — not dependency dressed up as partnership.</p>
+  <div class="footer-links">
+    <a href="#">northamericastrong.co</a>
+    <a href="#">linkedin.com/company/north-america-strong</a>
+  </div>
+</footer>
+
+</body>
+</html>
