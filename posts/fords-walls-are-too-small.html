@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ford's Walls Are Too Small — North America Strong</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0D0D0D;
+    color: #E8E2D6;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .sunrise-glow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: radial-gradient(ellipse 60% 100% at 50% 100%, rgba(201, 168, 76, 0.22) 0%, rgba(201, 168, 76, 0.1) 35%, rgba(201, 168, 76, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav, .post-header, .post-body, footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 0.5px solid #2A2A2A;
+  }
+
+  .wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #7A7469;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover { color: #E8E2D6; }
+  .nav-links a.active { color: #C9A84C; }
+
+  .post-header {
+    padding: 5rem 2.5rem 3rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A7469;
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+  }
+
+  .back-link:hover { color: #C9A84C; }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-series {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #C9A84C;
+  }
+
+  .meta-divider {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #3D3830;
+  }
+
+  .post-date {
+    font-size: 12px;
+    color: #7A7469;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #F0EBE0;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .subhead {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #9A9189;
+  }
+
+  .post-body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2.5rem 5rem;
+  }
+
+  .post-body p {
+    color: #C4BDAF;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-body p:first-of-type::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #C9A84C;
+    float: left;
+    line-height: 0.85;
+    margin: 0.1rem 0.6rem 0 0;
+  }
+
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #F0EBE0;
+    margin: 3rem 0 1.25rem;
+    letter-spacing: -0.005em;
+  }
+
+  .post-body strong {
+    color: #F0EBE0;
+    font-weight: 500;
+  }
+
+  .post-body a {
+    color: #C9A84C;
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(201, 168, 76, 0.4);
+  }
+
+  .post-body a:hover { border-bottom-color: #C9A84C; }
+
+  blockquote {
+    border-left: 2px solid #C9A84C;
+    padding: 0.25rem 0 0.25rem 1.75rem;
+    margin: 2.5rem 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #E8E2D6;
+  }
+
+  .post-body ul {
+    margin: 0 0 1.5rem 1.25rem;
+    color: #C4BDAF;
+  }
+
+  .post-body li {
+    margin-bottom: 0.6rem;
+    padding-left: 0.5rem;
+  }
+
+  .post-footer {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem 2.5rem 0;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 0.6rem;
+    padding-top: 2.5rem;
+    border-top: 0.5px solid #1A1A1A;
+  }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A7469;
+    border: 0.5px solid #2A2A2A;
+    padding: 0.4rem 0.75rem;
+  }
+
+  footer {
+    border-top: 0.5px solid #1A1A1A;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: #3D3830;
+    max-width: 400px;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    color: #3D3830;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+  }
+
+  .footer-links a:hover { color: #C9A84C; }
+</style>
+</head>
+<body>
+
+<div class="sunrise-glow"></div>
+
+<nav>
+  <a class="wordmark" href="../index.html">North America Strong</a>
+  <ul class="nav-links">
+    <li><a href="#">Manifesto</a></li>
+    <li><a href="../posts.html" class="active">The Series</a></li>
+    <li><a href="https://www.linkedin.com/company/north-america-strong/">LinkedIn</a></li>
+  </ul>
+</nav>
+
+<div class="post-header">
+  <a class="back-link" href="../posts.html">← All pieces</a>
+  <div class="post-meta">
+    <span class="post-series">The Hook</span>
+    <span class="meta-divider"></span>
+    <span class="post-date">Jul 27</span>
+  </div>
+  <h1>Ford's Walls Are Too Small</h1>
+  <p class="subhead">Self-reliance before alignment is the correct architecture. He just left out the third wall.</p>
+</div>
+
+<div class="post-body">
+  <p>Doug Ford is right about one thing, and it's the most important thing any elected official on this continent has said out loud in years: self-reliance comes before alignment. Get strong independently. Do your own homework. Then choose the alliance because you're strong enough to mean it — not because you're cornered and need each other. That's the correct architecture. That's Fortress Am-Can. He just drew the walls too small.</p>
+
+  <p>The case for leaving Mexico out isn't stupid, and it deserves a serious answer before it gets dismantled. The argument goes roughly like this: Mexico has governance problems the US and Canada don't share. Its rule of law is weaker. Chinese manufacturers are using it as a back door into North American markets, undermining the very de-risking the bloc is supposed to achieve. Continental integration with Mexico means inheriting its vulnerabilities, and a fortress is only as strong as its weakest wall. If self-reliance is the standard, Mexico hasn't cleared it yet.</p>
+
+  <p>That's a real argument. It's also exactly backwards.</p>
+
+  <h2>The wall you don't leave outside</h2>
+
+  <p>The solution to a weak wall isn't to leave it outside the fortress — it's to help build it. Mexico's electricity grid problems, its judicial independence deficit, its dependency on assembly rather than design: those are solvable problems, and the continent has material interest in solving them. Canada's mining capital paired with Mexican manufacturing infrastructure is a supply chain no external actor can easily threaten. The nearshoring wave already underway — driven largely by US firms moving production out of China — is landing in Nuevo León and Monterrey, not in Ontario or Ohio. Treating that industrial base as a vulnerability rather than an asset isn't strategic caution. It's a failure of continental imagination.</p>
+
+  <h2>The China backdoor</h2>
+
+  <p>There is a real China problem in Mexico, and it's worth naming clearly. Some Chinese manufacturers have established Mexican operations specifically to route goods through USMCA and sidestep tariffs. That's not a reason to exclude Mexico — it's a reason to get serious about rules of origin enforcement, value-added thresholds, and the kind of customs cooperation that actually plugs the backdoor. The vulnerability Ford is pointing at requires deeper integration to fix, not less.</p>
+
+  <h2>Three to-do lists, not one contingent plan</h2>
+
+  <p>Ford's underlying logic is actually the strongest part of his argument, and it applies to all three countries equally. Canada has its own homework that has nothing to do with Mexico or the US: interprovincial trade barriers that make it harder to ship beer across provincial lines than across an international border; banking, telecom, and grocery oligopolies that function as a tax on every Canadian household; energy infrastructure that still can't get Alberta's resources to tidewater on either coast. The United States has its own contradictions to resolve: a stated goal of reshoring manufacturing that coexists with trade policy that actively undermines the continental partnerships reshoring depends on, and a fiscal trajectory that will eventually crowd out the investments the strategy requires. Mexico has its electricity grid, its rule of law, its value-chain climb from assembly worker to designer and IP owner.</p>
+
+  <p>Three nations with three distinct to-do lists. None of them contingent on the others finishing first. That's the correct frame.</p>
+
+  <h2>What actually makes the walls hold</h2>
+
+  <p>What makes Fortress North America real isn't a common institution, a shared currency, or a political union. It's three countries that have done enough of their own homework to show up as genuine partners rather than desperate ones. A Canada that can actually export energy to Asia doesn't need the US to approve its pipelines. A Mexico with a functioning grid and a credible judiciary isn't dependent on US goodwill to attract industrial investment. A United States that has resolved its own reshoring contradictions can negotiate continental trade terms from clarity rather than anxiety. Three strong nations choosing the alliance — that choice, made freely and from strength, is what makes the walls hold.</p>
+
+  <h2>The third wall</h2>
+
+  <p>Ford got the architecture right. The self-reliance-first logic is exactly correct. The homework framework is exactly correct. The rejection of dependency-dressed-as-partnership is exactly correct. What's missing is the third wall.</p>
+
+  <p>A Fortress Am-Can without Mexico is a corridor with an open southern flank. The continent's fastest-growing industrial base, its most critical mineral corridors, and the manufacturing capacity meant to replace Chinese supply chain dependency are all south of the Rio Grande. A strategic vision that treats that territory as either a problem to be managed or a vulnerability to be excluded hasn't thought the fortress metaphor all the way through.</p>
+
+  <blockquote>Fortress North America means all three nations inside the walls — each having built their own section, each capable of standing alone, each choosing to stand together.</blockquote>
+
+  <p>That's not union. That's not surrender of sovereignty. That's the only version of continental strength that actually holds.</p>
+
+  <p><strong>Ford got the architecture right. He drew the walls too small.</strong></p>
+</div>
+
+<div class="post-footer">
+  <div class="post-tags">
+    <span class="tag">Canada</span>
+    <span class="tag">Mexico</span>
+    <span class="tag">The Hook</span>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">A continental sovereignty movement. Three self-reliant nations that choose alliance from strength — not dependency dressed up as partnership.</p>
+  <div class="footer-links">
+    <a href="#">northamericastrong.co</a>
+    <a href="#">linkedin.com/company/north-america-strong</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Partner Doesn't Do This — North America Strong</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0D0D0D;
+    color: #E8E2D6;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .sunrise-glow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: radial-gradient(ellipse 60% 100% at 50% 100%, rgba(201, 168, 76, 0.22) 0%, rgba(201, 168, 76, 0.1) 35%, rgba(201, 168, 76, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav, .post-header, .post-body, footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    border-bottom: 0.5px solid #2A2A2A;
+  }
+
+  .wordmark {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: #7A7469;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover { color: #E8E2D6; }
+  .nav-links a.active { color: #C9A84C; }
+
+  .post-header {
+    padding: 5rem 2.5rem 3rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A7469;
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+  }
+
+  .back-link:hover { color: #C9A84C; }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-series {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #C9A84C;
+  }
+
+  .meta-divider {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #3D3830;
+  }
+
+  .post-date {
+    font-size: 12px;
+    color: #7A7469;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #F0EBE0;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .subhead {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #9A9189;
+  }
+
+  .post-body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2.5rem 5rem;
+  }
+
+  .post-body p {
+    color: #C4BDAF;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-body p:first-of-type::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #C9A84C;
+    float: left;
+    line-height: 0.85;
+    margin: 0.1rem 0.6rem 0 0;
+  }
+
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #F0EBE0;
+    margin: 3rem 0 1.25rem;
+    letter-spacing: -0.005em;
+  }
+
+  .post-body strong {
+    color: #F0EBE0;
+    font-weight: 500;
+  }
+
+  .post-body a {
+    color: #C9A84C;
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(201, 168, 76, 0.4);
+  }
+
+  .post-body a:hover { border-bottom-color: #C9A84C; }
+
+  blockquote {
+    border-left: 2px solid #C9A84C;
+    padding: 0.25rem 0 0.25rem 1.75rem;
+    margin: 2.5rem 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #E8E2D6;
+  }
+
+  .post-body ul {
+    margin: 0 0 1.5rem 1.25rem;
+    color: #C4BDAF;
+  }
+
+  .post-body li {
+    margin-bottom: 0.6rem;
+    padding-left: 0.5rem;
+  }
+
+  .post-footer {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem 2.5rem 0;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 0.6rem;
+    padding-top: 2.5rem;
+    border-top: 0.5px solid #1A1A1A;
+  }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A7469;
+    border: 0.5px solid #2A2A2A;
+    padding: 0.4rem 0.75rem;
+  }
+
+  footer {
+    border-top: 0.5px solid #1A1A1A;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: #3D3830;
+    max-width: 400px;
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    color: #3D3830;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+  }
+
+  .footer-links a:hover { color: #C9A84C; }
+</style>
+</head>
+<body>
+
+<div class="sunrise-glow"></div>
+
+<nav>
+  <a class="wordmark" href="../index.html">North America Strong</a>
+  <ul class="nav-links">
+    <li><a href="#">Manifesto</a></li>
+    <li><a href="../posts.html" class="active">The Series</a></li>
+    <li><a href="https://www.linkedin.com/company/north-america-strong/">LinkedIn</a></li>
+  </ul>
+</nav>
+
+<div class="post-header">
+  <a class="back-link" href="../posts.html">← All pieces</a>
+  <div class="post-meta">
+    <span class="post-series">News</span>
+    <span class="meta-divider"></span>
+    <span class="post-date">Aug 3</span>
+  </div>
+  <h1>A Partner Doesn't Do This</h1>
+  <p class="subhead">Washington didn't just comment on Alberta separatism. It sat down with the separatists and discussed the mechanics.</p>
+</div>
+
+<div class="post-body">
+  <p>In January 2026, the United States Treasury Secretary went on a right-wing broadcast and called Alberta, a province of America's closest ally, "a natural partner for the U.S." He said Albertans are "very independent people" and that there's a "rumour" they may hold a referendum on leaving Canada. He said this with the cadence of a man dropping a hint, not reporting a fact. And he knew exactly what he was doing.</p>
+
+  <p>This wasn't an offhand remark. By the time Scott Bessent said those words, the Alberta Prosperity Project, the separatist group pushing for Alberta independence, had already met with State Department officials in Washington three times. They'd discussed switching Alberta to the U.S. dollar, requesting a $500 billion line of credit from the U.S. Treasury, and even building an independent Alberta military. The group's legal counsel told the Financial Times he was meeting "very, very senior people leaving our meetings to go directly to the Oval Office." The State Department confirmed the meetings took place. The White House said "no commitments were made." That's not reassurance. That's the language of a government leaving a door open.</p>
+
+  <h2>The grievances are real</h2>
+
+  <p>Let's be clear about what Alberta's grievances actually are, because the separatists aren't wrong about all of it. Alberta has spent decades watching federal policy constrain its energy sector. Pipeline projects have been blocked, delayed, or killed by regulatory and political interference from Ottawa. Interprovincial trade barriers, Canada's own internal dysfunction, make it harder for Alberta to move goods east than south. The province sends billions more to Ottawa than it gets back in services. These are legitimate frustrations with deep roots, and dismissing them is exactly how countries lose provinces.</p>
+
+  <p>But legitimate grievances don't explain what happened next.</p>
+
+  <h2>"Engagement with civil society types"</h2>
+
+  <p>What happened next is that a foreign government, Alberta's largest trading partner, sat down with a separatist group and workshopped the logistics of dismembering Canada. Not in back channels. Not through deniable intermediaries. Through the State Department and Treasury. And then a Cabinet secretary went on television and gave the project his public blessing.</p>
+
+  <p>B.C. Premier David Eby called it treason. That's a strong word. But what's the weaker word for a foreign government meeting with activists who want to break up your country, while simultaneously demanding trade concessions from your federal government? "Engagement with civil society types" is what the State Department called it. That framing tells you everything about how Washington sees the relationship.</p>
+
+  <h2>Two foreign governments, one fault line</h2>
+
+  <p>And Washington wasn't the only one pressing on the fault line. In May, researchers from DisinfoWatch published the most comprehensive report yet on foreign interference in the Alberta debate. The findings were blunt: Russia's Pravda News Network published sixty-seven articles focused on Alberta separatism between December 2025 and April 2026. Ontario, Canada's most populous province, received fourteen mentions in the same period, and eight of those were about a bridge dispute with Michigan. Russia wasn't covering Canadian news. It was pressing on a single fault line. The researchers were careful to note that Russia didn't create western alienation. But it is amplifying it, from one direction, while the United States engages with it from the other. Two foreign governments pressing on the same internal fracture simultaneously is not a coincidence. It's a convergence.</p>
+
+  <h2>What kind of relationship is this</h2>
+
+  <p>The question this raises is not about Alberta. It's about what kind of continental relationship North America actually has.</p>
+
+  <p>The Fortress North America thesis says this: when one country represents 85% of the bloc's GDP and the other two have limited alternatives, you don't have an alliance. You have a dependency arrangement in which the dominant partner has veto power it never has to formally exercise. It can shape outcomes simply by being the only viable option. The US doesn't need to annex Alberta. It just needs Alberta to believe that Ottawa is the obstacle and Washington is the exit. The meetings, the credit line discussions, the on-camera endorsement. These aren't acts of partnership. They're the moves of a country that sees its neighbours as assets to manage, not allies to strengthen.</p>
+
+  <h2>Canada's homework</h2>
+
+  <p>Canada's response should not be outrage alone. Outrage is the easy part. The harder truth is that Canada's vulnerability to this kind of interference is largely self-inflicted. A country with functional interprovincial trade, tidewater access for its energy, competitive domestic markets, and a capital ecosystem that keeps companies past Series B is a country that doesn't produce separatist movements for foreign governments to exploit. The grievances are real because the failures are real. Canada's homework, the internal structural reforms that would make the federation worth staying in, is the actual defense against this. Not indignation. Not flag-waving. Fixing the things that make the pitch work.</p>
+
+  <h2>A warning for Mexico</h2>
+
+  <p>Mexico should be paying attention. If this is how the US engages with its closest, most culturally similar ally, openly, through senior officials, on the record, then the idea that the US-Mexico relationship operates on a foundation of mutual respect requires a harder look. The US has decades of documented interference in Mexican politics, and the current posture toward Alberta suggests the pattern hasn't changed. It's just moved north. Every time Washington treats a neighbour's internal fracture as a strategic opportunity rather than a shared problem, it validates the core criticism of the continental relationship: that the US prefers dependent partners to strong ones.</p>
+
+  <p>And that's the uncomfortable thing this episode proves. Not that the US is acting in bad faith. Countries pursue interests, and that's what countries do. But the current structure of the North American relationship makes this kind of behaviour rational. When Canada and Mexico have limited alternatives and the US knows it, interference isn't a betrayal of the system. It's a feature of the system. The asymmetry is the problem. And the asymmetry only changes when the other two countries become strong enough, and diversified enough, to make the partnership genuinely voluntary.</p>
+
+  <h2>October 19</h2>
+
+  <p>Alberta goes to the polls on October 19. The question on the ballot asks whether the province should remain in Canada or begin the legal process toward a binding separation referendum. Polling says 60% will vote to stay. First Nations across treaty territories have formally opposed the entire process, arguing, correctly, that separation would violate treaty rights that predate the province itself. The referendum will likely fail. But the conditions that produced it, foreign interference pressing on real domestic dysfunction, won't disappear with a vote count.</p>
+
+  <blockquote>A fortress where one country holds the keys isn't a fortress. It's an arrangement. And arrangements get renegotiated by the side with leverage.</blockquote>
+
+  <p>Three strong countries choosing each other. That's the only version of this continent that holds.</p>
+</div>
+
+<div class="post-footer">
+  <div class="post-tags">
+    <span class="tag">Canada</span>
+    <span class="tag">Alberta</span>
+    <span class="tag">News</span>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">A continental sovereignty movement. Three self-reliant nations that choose alliance from strength — not dependency dressed up as partnership.</p>
+  <div class="footer-links">
+    <a href="#">northamericastrong.co</a>
+    <a href="#">linkedin.com/company/north-america-strong</a>
+  </div>
+</footer>
+
+</body>
+</html>
